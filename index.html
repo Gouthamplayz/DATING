@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oru Date Povamoo? 🌴💖 Kerala Date Edition</title>
+  <meta name="description" content="A cute, un-rejectable Kerala romantic date proposal website. Choose your favorite Kerala date spots!">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>🌴</text></svg>">
+</head>
+<body>
+  <!-- Ambient Floating Heart Particles Canvas -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <span class="palm">🌴</span>
+      <span>Oru Date?</span>
+    </a>
+    <div class="nav-actions">
+      <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle audio effects">
+        🔔 Sound: ON
+      </button>
+      <a href="admin.html" class="admin-link" title="Dashboard">Admin 🔐</a>
+    </div>
+  </nav>
+
+  <!-- Main Hero Content -->
+  <main class="page-wrapper">
+    <div class="glass-card hero-card">
+      <div class="cute-mascot">🌴🥥💖</div>
+      
+      <div class="hero-header">
+        <span class="malayalam-eyebrow">ഒരു അടിപൊളി Date പ്ലാൻ ചെയ്യാം?</span>
+        <h1 class="hero-title">
+          Oru Date<br>
+          <span class="gradient-text">povamoo?</span> 💌
+        </h1>
+        <p class="hero-subtitle" id="proposalSubtitle">
+          From Kozhikode beach ice orathi to Munnar mist... oru chaya kudichu samsarikkan varumo? ☕✨
+        </p>
+      </div>
+
+      <!-- Proposal Interactive Arena -->
+      <div class="proposal-arena">
+        <p class="proposal-question-text" id="proposalQuestion">
+          Enikku ninne oru date-inu vilikkanam... Will you say YES? 🥰
+        </p>
+
+        <div class="proposal-btn-row">
+          <a href="details.html" id="yesBtn" class="btn btn-yes">
+            <span>Athe, Let's Plan It! 💖</span>
+          </a>
+          <button type="button" id="noBtn" class="btn btn-no">
+            Venda, Not this time 🙈
+          </button>
+        </div>
+
+        <div id="banterBubble" class="banter-bubble">
+          Try clicking 'No' if you dare! 😉
+        </div>
+      </div>
+
+      <p class="footer-note" style="margin-top: 24px; font-size: 13px; color: var(--text-dim); text-align: center;">
+        🌴 God's Own Country Romantic Edition • Made with 100% pure love & smiles
+      </p>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Customize text dynamically if configured in config.js
+    if (window.DATE_CONFIG) {
+      const sub = document.getElementById('proposalSubtitle');
+      const q = document.getElementById('proposalQuestion');
+      if (sub && window.DATE_CONFIG.proposalSubtitle) {
+        sub.textContent = window.DATE_CONFIG.proposalSubtitle;
+      }
+    }
+  </script>
+</body>
+</html>

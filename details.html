@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Birthday & Details 🎂✨ | Oru Date?</title>
+  <meta name="description" content="Step 1: Share your birthday and name for our special Kerala date.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+</head>
+<body>
+  <!-- Ambient Hearts Canvas -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <span class="palm">🌴</span>
+      <span>Oru Date?</span>
+    </a>
+    <div class="nav-actions">
+      <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle audio effects">
+        🔔 Sound: ON
+      </button>
+      <a href="admin.html" class="admin-link" title="Dashboard">Admin 🔐</a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="page-wrapper">
+    <div class="glass-card narrow">
+      <!-- Step Indicator -->
+      <div class="step-indicator">
+        <span class="step-badge">Step 01 / 03</span>
+        <div class="step-dots">
+          <span class="step-dot active"></span>
+          <span class="step-dot"></span>
+          <span class="step-dot"></span>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div class="hero-header" style="text-align: left; margin-bottom: 24px;">
+        <span class="malayalam-eyebrow">Birthday & പേര് പറയൂ 🌸</span>
+        <h1 class="hero-title" style="font-size: clamp(28px, 5.5vw, 42px); margin-bottom: 8px;">
+          Tell Me About <span class="gradient-text">You</span> ✨
+        </h1>
+        <p class="hero-subtitle" style="margin: 0; text-align: left;">
+          Let's make this date super special and personalized just for you!
+        </p>
+      </div>
+
+      <!-- Details Form -->
+      <form id="detailsForm">
+        <div class="form-group">
+          <label for="userName" class="form-label">
+            <span>Your Lovely Name</span>
+            <span class="label-hint">എന്താ വിളിക്കേണ്ടേ? 💖</span>
+          </label>
+          <input 
+            type="text" 
+            id="userName" 
+            name="userName" 
+            class="input-luxe" 
+            placeholder="e.g. Ananya, Malavika, Sneha..." 
+            maxlength="40" 
+            required 
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="userDob" class="form-label">
+            <span>Date of Birth (DOB) 🎂</span>
+            <span class="label-hint">Birthday eppozha? ✨</span>
+          </label>
+          <input 
+            type="date" 
+            id="userDob" 
+            name="userDob" 
+            class="input-luxe" 
+            required
+            max="2030-12-31"
+          >
+
+          <!-- Cute banter card -->
+          <div class="dob-fun-card">
+            <span class="icon">🎁</span>
+            <div class="text">
+              <span class="highlight">Secret info:</span> Jathakam / Horoscope nokkaan alla tto! Birthday special aakkaan & treats plan cheyyaan mathram aanu! 🎂🎈
+            </div>
+          </div>
+
+          <!-- Dynamic Zodiac & Age preview badge -->
+          <div id="zodiacPreview" style="display: none; margin-top: 12px;">
+            <div class="zodiac-badge" id="zodiacBadge">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a href="index.html" class="btn btn-secondary">
+            ← Back
+          </a>
+          <button type="submit" class="btn btn-primary" id="continueBtn">
+            Pick Date Spots → 🌴
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/details.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Date Pass 🎟️💖 | Oru Date?</title>
+  <meta name="description" content="Step 3: Review and lock your official Kerala date pass!">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>🎟️</text></svg>">
+</head>
+<body>
+  <!-- Ambient Hearts Canvas -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <span class="palm">🌴</span>
+      <span>Oru Date?</span>
+    </a>
+    <div class="nav-actions">
+      <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle audio effects">
+        🔔 Sound: ON
+      </button>
+      <a href="admin.html" class="admin-link" title="Dashboard">Admin 🔐</a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="page-wrapper">
+    <div class="glass-card narrow">
+      <!-- Step Indicator -->
+      <div class="step-indicator">
+        <span class="step-badge">Step 03 / 03</span>
+        <div class="step-dots">
+          <span class="step-dot completed"></span>
+          <span class="step-dot completed"></span>
+          <span class="step-dot active"></span>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div class="hero-header" style="text-align: center; margin-bottom: 20px;">
+        <span class="malayalam-eyebrow">സെറ്റ് ആയോ? Ready to lock? 🔒</span>
+        <h1 class="hero-title" style="font-size: clamp(28px, 5.5vw, 42px); margin-bottom: 8px;">
+          Your <span class="gradient-text">Kerala Date Pass</span> 🎟️
+        </h1>
+        <p class="hero-subtitle" style="margin: 0 auto; text-align: center;">
+          Here is your official pass! Once locked, strictly no refunds or cancellations allowed! 😉💖
+        </p>
+      </div>
+
+      <!-- Date Pass Ticket / Voucher -->
+      <div class="ticket-wrapper">
+        <div class="ticket-header">
+          <div class="ticket-title">🌴 Kerala Date Pass • VIP Voucher</div>
+          <div class="ticket-serial" id="ticketSerial">#KL-LOVE-2026</div>
+        </div>
+
+        <div class="ticket-details-grid">
+          <div class="ticket-item">
+            <div class="ticket-label">Special Guest</div>
+            <div class="ticket-val" id="ticketName">Pennee 🌸</div>
+          </div>
+
+          <div class="ticket-item">
+            <div class="ticket-label">Date of Birth & Vibe</div>
+            <div class="ticket-val" id="ticketDob">Not provided 🎂</div>
+          </div>
+
+          <div class="ticket-item full-col">
+            <div class="ticket-label">Selected Date Spots</div>
+            <div id="ticketPlaces" style="margin-top: 4px;">
+              <!-- Badges populated dynamically -->
+            </div>
+          </div>
+
+          <div class="ticket-item">
+            <div class="ticket-label">Preferred Kerala Region</div>
+            <div class="ticket-val" id="ticketArea">Anywhere with good vibes 🌴</div>
+          </div>
+
+          <div class="ticket-item">
+            <div class="ticket-label">Host / Date Partner</div>
+            <div class="ticket-val" id="ticketHost">Gautham ☕</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consent Agreement -->
+      <label class="consent" style="margin: 18px 0; display: flex; align-items: center; gap: 12px; cursor: pointer;">
+        <input type="checkbox" id="consentCheck" checked style="width: 20px; height: 20px; accent-color: var(--rose-primary); cursor: pointer;">
+        <span style="font-size: 14px; color: var(--text-cream); line-height: 1.4;">
+          I agree to have endless fun, drink lots of chaya, and not be grumpy! ☕🥰
+        </span>
+      </label>
+
+      <!-- Action Buttons -->
+      <button type="button" id="confirmBtn" class="btn btn-yes btn-full" style="font-size: 18px;">
+        Lock This Date! 💖🚀
+      </button>
+
+      <div style="text-align: center; margin-top: 14px;">
+        <a href="place.html" class="admin-link">← Change selected spots</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/confirm.js"></script>
+</body>
+</html>

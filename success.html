@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Confirmed! 🥳💖 Set Aayallo! | Oru Date?</title>
+  <meta name="description" content="Date officially locked! Get ready for a wonderful Kerala date.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>🎉</text></svg>">
+</head>
+<body>
+  <!-- Ambient Hearts Canvas -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <span class="palm">🌴</span>
+      <span>Oru Date?</span>
+    </a>
+    <div class="nav-actions">
+      <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle audio effects">
+        🔔 Sound: ON
+      </button>
+      <a href="admin.html" class="admin-link" title="Dashboard">Admin 🔐</a>
+    </div>
+  </nav>
+
+  <!-- Main Hero Container -->
+  <main class="page-wrapper">
+    <div class="glass-card hero-card narrow">
+      <div class="celebration-burst">🥳🎉🌴</div>
+      
+      <div class="hero-header">
+        <span class="malayalam-eyebrow">സെറ്റ് ആയി മച്ചാനേ! Date Confirmed!</span>
+        <h1 class="hero-title" style="font-size: clamp(32px, 6.5vw, 54px);">
+          Woohoo!<br>
+          <span class="gradient-text">Set Aayallo!</span> 💖
+        </h1>
+        <p class="hero-subtitle">
+          Your date preferences are officially recorded in the database! Get ready for endless chaya, cool breeze & wholesome memories. ☕✨
+        </p>
+      </div>
+
+      <!-- Quick Summary Card -->
+      <div class="dob-fun-card" style="text-align: left; margin: 18px 0; background: rgba(0,0,0,0.3);">
+        <span class="icon">💌</span>
+        <div class="text" id="finalSummary">
+          Loading your date voucher...
+        </div>
+      </div>
+
+      <!-- Send on WhatsApp Button -->
+      <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn whatsapp-btn btn-full">
+        <span>📲 Send Choices on WhatsApp to Him</span>
+      </a>
+
+      <p style="font-size: 13px; color: var(--text-dim); margin-top: 12px;">
+        Tap the button above to ping him directly on WhatsApp with your chosen spots!
+      </p>
+
+      <div class="form-actions" style="justify-content: center; margin-top: 24px;">
+        <a href="index.html" class="btn btn-secondary">
+          🔄 Back to Start
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/success.js"></script>
+</body>
+</html>

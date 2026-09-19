@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard 🔐 | Oru Date?</title>
+  <meta name="description" content="Private dashboard to view all stored date proposals and responses.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>">
+</head>
+<body>
+  <!-- Ambient Canvas -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <span class="palm">🌴</span>
+      <span>Oru Date?</span>
+    </a>
+    <div class="nav-actions">
+      <a href="index.html" class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">
+        ← Back to Site
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="page-wrapper">
+    <!-- Passcode Auth Screen -->
+    <div id="authCard" class="glass-card narrow">
+      <div class="hero-header">
+        <div class="cute-mascot">🔐</div>
+        <h1 class="hero-title" style="font-size: 32px;">Admin Login</h1>
+        <p class="hero-subtitle">Enter your secret passcode from <code>js/config.js</code> to view saved date proposals.</p>
+      </div>
+
+      <form id="authForm" style="margin-top: 20px;">
+        <div class="form-group">
+          <label for="passcodeInput" class="form-label">
+            <span>Admin Passcode</span>
+            <span class="label-hint">Default is 1234</span>
+          </label>
+          <input 
+            type="password" 
+            id="passcodeInput" 
+            class="input-luxe" 
+            placeholder="Enter passcode..." 
+            required 
+            autocomplete="current-password"
+          >
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          Unlock Dashboard 🔓
+        </button>
+      </form>
+    </div>
+
+    <!-- Dashboard Content (Revealed after unlocking) -->
+    <div id="dashboardCard" class="glass-card wide" style="display: none;">
+      <div class="admin-header-row">
+        <div>
+          <span class="step-badge">DATABASE MANAGER</span>
+          <h1 class="hero-title" style="font-size: 32px; margin: 8px 0 4px;">
+            Saved <span class="gradient-text">Date Proposals</span> 🌴💖
+          </h1>
+          <p class="hero-subtitle" style="margin: 0; text-align: left;">
+            All accepted proposals stored in your browser database & synced to cloud.
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button id="exportCsvBtn" class="btn btn-primary" style="font-size: 14px; padding: 10px 18px;">
+            📥 Download CSV
+          </button>
+          <button id="clearAllBtn" class="btn btn-del" style="font-size: 14px; padding: 10px 18px;">
+            🗑️ Clear All
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="admin-stats-grid">
+        <div class="stat-box">
+          <div class="stat-num" id="totalProposalsCount">0</div>
+          <div class="stat-lbl">Proposals Accepted 💖</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="favoriteSpot">None</div>
+          <div class="stat-lbl">Top Picked Spot 🏖️</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="latestDate">N/A</div>
+          <div class="stat-lbl">Latest Submission 📅</div>
+        </div>
+      </div>
+
+      <!-- Proposals Table -->
+      <div class="admin-table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Name</th>
+              <th>Date of Birth (DOB)</th>
+              <th>Age & Zodiac</th>
+              <th>Selected Spots</th>
+              <th>Area</th>
+              <th>Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="proposalsTableBody">
+            <!-- Dynamically injected -->
+          </tbody>
+        </table>
+      </div>
+
+      <div id="emptyState" style="display: none; text-align: center; padding: 40px 16px;">
+        <div style="font-size: 42px; margin-bottom: 8px;">💌</div>
+        <h3 style="font-size: 18px; margin-bottom: 6px;">No proposals recorded yet</h3>
+        <p style="font-size: 14px; color: var(--text-dim);">
+          Share your website link with her! Once she accepts and picks her DOB & spots, they will appear right here.
+        </p>
+      </div>
+
+      <div style="margin-top: 24px; text-align: center;">
+        <button id="lockDashboardBtn" class="btn btn-secondary" style="font-size: 13px;">
+          🔒 Lock Dashboard
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

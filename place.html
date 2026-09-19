@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where Should We Go? 🌴🌊 | Oru Date?</title>
+  <meta name="description" content="Step 2: Choose your favorite Kerala date spots like beach, cafe, mall, park, backwaters or Munnar mist!">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>🏖️</text></svg>">
+</head>
+<body>
+  <!-- Ambient Hearts Canvas -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <span class="palm">🌴</span>
+      <span>Oru Date?</span>
+    </a>
+    <div class="nav-actions">
+      <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle audio effects">
+        🔔 Sound: ON
+      </button>
+      <a href="admin.html" class="admin-link" title="Dashboard">Admin 🔐</a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="page-wrapper">
+    <div class="glass-card wide">
+      <!-- Step Indicator -->
+      <div class="step-indicator">
+        <span class="step-badge">Step 02 / 03</span>
+        <div class="step-dots">
+          <span class="step-dot completed"></span>
+          <span class="step-dot active"></span>
+          <span class="step-dot"></span>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div class="hero-header" style="text-align: left; margin-bottom: 20px;">
+        <span class="malayalam-eyebrow">എവിടെ പോകണം? Where to go? 🌴</span>
+        <h1 class="hero-title" style="font-size: clamp(28px, 5.5vw, 44px); margin-bottom: 8px;">
+          Pick Your Dream <span class="gradient-text">Kerala Date Spots</span> 🌊
+        </h1>
+        <p class="hero-subtitle" style="margin: 0; text-align: left;">
+          Select as many as you like! From beach sunsets to cozy cafes, everything is on the table.
+        </p>
+      </div>
+
+      <!-- Places Selection Form -->
+      <form id="placesForm">
+        <div class="place-grid">
+          <!-- 1. Beach -->
+          <label class="place-card" data-place="Beach (Kozhikode / Fort Kochi / Kovalam)">
+            <input type="checkbox" name="places" value="Beach (Fort Kochi / Kovalam / Kozhikode)">
+            <div class="place-card-top">
+              <span class="place-emoji">🏖️</span>
+              <span class="place-check">✓</span>
+            </div>
+            <div class="place-title">Kerala Beach</div>
+            <div class="place-vibe">Sunset & Sea Breeze</div>
+            <div class="place-desc">Walk along the waves, watch the golden sunset, and enjoy ice orathi & pickled snacks.</div>
+          </label>
+
+          <!-- 2. Cafe -->
+          <label class="place-card" data-place="Aesthetic Café">
+            <input type="checkbox" name="places" value="Aesthetic Café">
+            <div class="place-card-top">
+              <span class="place-emoji">☕</span>
+              <span class="place-check">✓</span>
+            </div>
+            <div class="place-title">Aesthetic Café</div>
+            <div class="place-vibe">Coffee & Deep Talks</div>
+            <div class="place-desc">Warm aesthetic lighting, chilled cold brews, chocolate brownies, and cozy endless chatter.</div>
+          </label>
+
+          <!-- 3. Mall -->
+          <label class="place-card" data-place="Mall & Arcade (Lulu / Centre Square)">
+            <input type="checkbox" name="places" value="Mall & Arcade (Lulu / Centre Square)">
+            <div class="place-card-top">
+              <span class="place-emoji">🛍️</span>
+              <span class="place-check">✓</span>
+            </div>
+            <div class="place-title">Mall & Arcades</div>
+            <div class="place-vibe">Fun, Games & Food</div>
+            <div class="place-desc">Arcade gaming, claw machines, window shopping, and soft ice cream at the food court.</div>
+          </label>
+
+          <!-- 4. Park / Nature -->
+          <label class="place-card" data-place="Park & Botanical Gardens">
+            <input type="checkbox" name="places" value="Park & Nature Walk">
+            <div class="place-card-top">
+              <span class="place-emoji">🌳</span>
+              <span class="place-check">✓</span>
+            </div>
+            <div class="place-title">Park & Gardens</div>
+            <div class="place-vibe">Peaceful Stroll</div>
+            <div class="place-desc">Green canopy, quiet stone benches, blooming flowers, and calm breeze away from the city noise.</div>
+          </label>
+
+          <!-- 5. Backwaters / Kayal -->
+          <label class="place-card" data-place="Alleppey Backwaters & Shikara">
+            <input type="checkbox" name="places" value="Alleppey Backwaters & Shikara">
+            <div class="place-card-top">
+              <span class="place-emoji">🛶</span>
+              <span class="place-check">✓</span>
+            </div>
+            <div class="place-title">Kayal & Backwaters</div>
+            <div class="place-vibe">Shikara & Chaya</div>
+            <div class="place-desc">Floating along coconut palm canals, gentle ripples of water, and steaming elaichi chaya.</div>
+          </label>
+
+          <!-- 6. Munnar Mist -->
+          <label class="place-card" data-place="Munnar / Vagamon Hills">
+            <input type="checkbox" name="places" value="Munnar / Vagamon Hills">
+            <div class="place-card-top">
+              <span class="place-emoji">🍃</span>
+              <span class="place-check">✓</span>
+            </div>
+            <div class="place-title">Misty Hill Station</div>
+            <div class="place-vibe">Sweater Weather & Tea</div>
+            <div class="place-desc">Emerald tea plantations, cool misty wind, viewpoints, and warm woolen sweater aesthetics.</div>
+          </label>
+
+          <!-- 7. Food & Biriyani -->
+          <label class="place-card" data-place="Movie + Dum Biriyani Date">
+            <input type="checkbox" name="places" value="Movie + Dum Biriyani Date">
+            <div class="place-card-top">
+              <span class="place-emoji">🍿</span>
+              <span class="place-check">✓</span>
+            </div>
+            <div class="place-title">Movie + Biriyani</div>
+            <div class="place-vibe">The Kerala Classic</div>
+            <div class="place-desc">Latest cinema with cheesy popcorn, followed by authentic Thalassery dum biriyani and sulaimani.</div>
+          </label>
+
+          <!-- 8. Book Cafe / Cozy Corner -->
+          <label class="place-card" data-place="Cozy Book Corner">
+            <input type="checkbox" name="places" value="Cozy Book Corner">
+            <div class="place-card-top">
+              <span class="place-emoji">📚</span>
+              <span class="place-check">✓</span>
+            </div>
+            <div class="place-title">Quiet Book Corner</div>
+            <div class="place-vibe">Intimate & Chill</div>
+            <div class="place-desc">Browsing cute books, sipping warm drinks, and sharing stories in a serene bookstore.</div>
+          </label>
+        </div>
+
+        <!-- Preferred City / Area in Kerala -->
+        <div class="form-group" style="margin-top: 10px;">
+          <label for="dateArea" class="form-label">
+            <span>Preferred Kerala City / Area (Optional)</span>
+            <span class="label-hint">എവിടെയാ കൂടുതൽ ഇഷ്ടം? 📍</span>
+          </label>
+          <input 
+            type="text" 
+            id="dateArea" 
+            name="dateArea" 
+            class="input-luxe" 
+            placeholder="e.g. Kochi (Panampilly / Fort Kochi), Kozhikode, Trivandrum, Thrissur..." 
+            maxlength="60"
+          >
+        </div>
+
+        <!-- Custom Wish Spot -->
+        <div class="form-group">
+          <label for="customSpot" class="form-label">
+            <span>Any Other Special Place in Mind? (Optional)</span>
+            <span class="label-hint">വേറെ എന്തെങ്കിലും ആഗ്രഹം? ✨</span>
+          </label>
+          <input 
+            type="text" 
+            id="customSpot" 
+            name="customSpot" 
+            class="input-luxe" 
+            placeholder="e.g. A drive through Athirappilly, Varkala cliff sunset cafe, rooftop dinner..." 
+            maxlength="80"
+          >
+        </div>
+
+        <!-- Actions -->
+        <div class="form-actions">
+          <a href="details.html" class="btn btn-secondary">
+            ← Back
+          </a>
+          <button type="submit" class="btn btn-primary" id="reviewBtn">
+            Review Date Pass → 🎟️
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/place.js"></script>
+</body>
+</html>
